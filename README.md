@@ -28,8 +28,7 @@
 ## 🛠️ Built With
 
 - **HTML5**
-- **CSS3** (Flexbox, Grid Layout, Variables)
-- **JavaScript** (for future interactions)
+- **CSS3**
 
 ---
 

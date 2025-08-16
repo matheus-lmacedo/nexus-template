@@ -81,7 +81,7 @@ The logo in the header is an inline SVG. To replace it, copy your own SVG code a
 
 ## ✉️ Contact
 
-Made with by **Matheus Macêdo**.
+Made by **Matheus Macêdo**.
 
 - [LinkedIn](https://www.linkedin.com/in/matheus-lmacedo/)
 - [Portfolio](https://matheus-lmacedo.vercel.app/)

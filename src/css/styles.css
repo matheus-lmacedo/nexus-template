@@ -1,0 +1,345 @@
+/* ==================================
+   GENERAL
+   ================================== */
+body {
+  background-color: #282828;
+  color: #fff;
+  font-family: "ChaletComprime", sans-serif;
+  /* Adding a more modern default font */
+}
+
+/* ==================================
+   HEADER
+   ================================== */
+.header {
+  height: 80px;
+  background-color: #0b0b0b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  border-bottom: 1px solid #282828;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo svg {
+  color: white;
+  width: 28px;
+  height: 28px;
+}
+
+.logo .separator {
+  width: 1px;
+  height: 25px;
+  background-color: #ffffff80;
+}
+
+.logo .logo-text {
+  font-family: "Orbitron", sans-serif;
+  font-size: 24px;
+}
+
+.logo .logo-text a {
+  color: white;
+  text-decoration: none;
+}
+
+.header .menu {
+  display: flex;
+  gap: 30px;
+}
+
+.header .menu li a {
+  padding: 30px 5px;
+  /* Padding adjustment for better alignment */
+  color: #e8e8e8;
+  font-weight: bold;
+  font-size: 15px;
+  position: relative;
+  text-decoration: none;
+}
+
+.header .menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  /* Adjustment to bring the line closer */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.header .menu li a:hover::after {
+  transform: scaleX(1);
+}
+
+.header .menu li a img {
+  margin-left: 5px;
+}
+
+/* ==================================
+   HOME SECTION
+   ================================== */
+.home {
+  display: flex;
+  position: relative;
+  min-height: calc(100vh - 80px);
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.7) 35%,
+    transparent 65%
+  );
+}
+
+.home .background-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.home .info-container {
+  position: absolute;
+  z-index: 1;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  padding: 80px;
+  max-width: 780px;
+}
+
+.home .features-list {
+  display: flex;
+  gap: 32px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #ffffff20;
+  border-radius: 8px;
+  background-color: #00000030;
+  backdrop-filter: blur(5px);
+}
+
+.feature-item .feature-icon {
+  color: white;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.feature-text .feature-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.feature-text p {
+  font-size: 14px;
+  color: #c7c7c7;
+}
+
+.home .main-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 30px;
+}
+
+.home .main-text {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.btn-buy-home {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid #fff;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  width: 50%;
+  transition: all 0.3s ease-in;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-buy-home:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ==================================
+   BUY NOW SECTION
+   ================================== */
+.buy-now-section {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  background-image: url("../images/bg-section.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.buy-now-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.7) 35%,
+    transparent 65%
+  );
+}
+
+.section-title,
+.product-card {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+  border: 1px solid #ffffff20;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 30px #00000080;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px #000000a0, 0 0 20px #a855f780;
+}
+
+.image-column .product-cover {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.details-column {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.product-title {
+  font-size: 32px;
+  font-family: "Orbitron", sans-serif;
+  margin-bottom: 15px;
+}
+
+.product-description {
+  font-size: 16px;
+  color: #c7c7c7;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.platform-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.platform-tags li {
+  background-color: #ffffff1a;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.price-section {
+  margin-top: auto;
+  margin-bottom: 20px;
+  border-top: 1px solid #ffffff20;
+  padding-top: 20px;
+}
+
+.price-section span {
+  font-size: 16px;
+  color: #c7c7c7;
+}
+
+.price-section strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+}
+
+.btn-buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #a855f7, #6d28d9);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-buy svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-buy:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #a855f7;
+}
+

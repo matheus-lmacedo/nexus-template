@@ -5,7 +5,7 @@
 
 > A modern, responsive, and high-performance landing page template with a dark-mode aesthetic, ideal for games, tech products, apps, and startups.
 
-**[➡️ View Live Demo](https://YOUR-LINK-HERE.vercel.app/)**
+**[➡️ View Live Demo](https://matheus-lmacedo.github.io/nexus-template/)**
 
 ---
 
@@ -81,7 +81,7 @@ The logo in the header is an inline SVG. To replace it, copy your own SVG code a
 
 ## ✉️ Contact
 
-Made with by **Matheus Macêdo**.
+Made by **Matheus Macêdo**.
 
 - [LinkedIn](https://www.linkedin.com/in/matheus-lmacedo/)
 - [Portfolio](https://matheus-lmacedo.vercel.app/)
